@@ -1,0 +1,25 @@
+<%= form_for(@article) do |f| %>
+
+<%= f.label :title %>
+<br>
+<%= f.text_field :title %>
+
+<br>
+
+<%= f.label :content %>
+<br>
+<%= f.text_area :content, :cols => "50", :rows => "10" %>
+
+<br>
+
+<%= f.submit %>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to 'Home', articles_path  %>
+
+<br>
+
+<%= link_to 'Delete article', article_path(@article), method: :delete %>
